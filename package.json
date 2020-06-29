@@ -1,0 +1,12 @@
+{
+  "name": "mineflayer-pipeline",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/RealPeha/mineflayer-pipeline.git",
+  "author": "RealPeha <real.peha@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "minecraft-data": "^2.61.0",
+    "mineflayer": "^2.22.0"
+  }
+}
