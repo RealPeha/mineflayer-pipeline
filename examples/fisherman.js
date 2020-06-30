@@ -1,14 +1,16 @@
+// https://github.com/PrismarineJS/mineflayer/blob/master/examples/fisherman.js
+
 const mineflayer = require('mineflayer')
 const mcData = require('minecraft-data')('1.15.2')
 
-const Pipeline = require('../lib')
-const { value, nextIf, run } = require('../lib/common')
-const { chat, equip, on, off, fish, consume, activateItem } = require('../lib/mineflayer')
+const Pipeline = require('../')
+const { value, nextIf, run } = require('../common')
+const { chat, equip, on, off, fish, consume, activateItem } = require('../mineflayer')
 
 const bot = mineflayer.createBot({
 	username: 'Valet',
 	host: 'localhost',
-	port: 50578,
+	port: 51005,
 	version: '1.15.2'
 })
 
@@ -56,6 +58,7 @@ const stopFishing = () => [
     off('playerCollect', onCollect),
     nextIf(nowFishing),
     activateItem()
+        .try(() => (nowFishing = false)),
 ]
 
 const eat = () => [
