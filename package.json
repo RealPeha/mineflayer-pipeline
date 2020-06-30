@@ -1,7 +1,7 @@
 {
   "name": "mineflayer-pipeline",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "lib/index.js",
   "repository": "https://github.com/RealPeha/mineflayer-pipeline.git",
   "author": "RealPeha <real.peha@gmail.com>",
   "license": "MIT",

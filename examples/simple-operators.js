@@ -1,5 +1,5 @@
 const Pipeline = require('../lib')
-const { log, wait, nextIf, raw, value, jump } = require('../lib/tasks/common')
+const { log, wait, nextIf, raw, value, jump } = require('../lib/common')
 
 // create task using raw operator
 const increase = raw((result, pipeline) => pipeline.next(result + 1))
