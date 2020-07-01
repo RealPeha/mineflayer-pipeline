@@ -4,9 +4,7 @@ const { log, wait, nextIf, raw, value, jump } = require('../common')
 // create task using raw operator
 const increase = raw((result, pipeline) => pipeline.next(result + 1))
 
-const obj = {}
-
-const pipe = new Pipeline(obj)
+const pipe = new Pipeline()
 
 pipe.run(
     value(0), // initial value in pipeline

@@ -5,7 +5,9 @@ const mcData = require('minecraft-data')('1.15.2')
 
 const Pipeline = require('../')
 const { value, nextIf, run } = require('../common')
-const { chat, equip, on, off, fish, consume, activateItem } = require('../mineflayer')
+const { chat, equip, on, off, fish, consume, activateItem } = require('../tasks')
+
+const items = mcData.itemsByName
 
 const bot = mineflayer.createBot({
 	username: 'Valet',
@@ -46,7 +48,7 @@ const onCollect = (player, entity) => {
 // pipelines
 const startFishing = () => [
     chat('Fishing'),
-    value(mcData.itemsByName.fishing_rod.id),
+    value(items.fishing_rod.id),
     equip('hand')
         .try(() => (nowFishing = true))
         .catch(),
@@ -63,7 +65,7 @@ const stopFishing = () => [
 
 const eat = () => [
     run(stopFishing()),
-    value(mcData.itemsByName.salmon.id),
+    value(items.salmon.id),
     equip('hand'),
     consume()
 ]

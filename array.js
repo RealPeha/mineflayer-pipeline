@@ -1,1 +1,1 @@
-module.exports = require('./lib/tasks/array')
+module.exports = require('./lib/operators/array')

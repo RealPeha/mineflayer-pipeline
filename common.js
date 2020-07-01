@@ -1,1 +1,1 @@
-module.exports = require('./lib/tasks/common')
+module.exports = require('./lib/operators/common')
