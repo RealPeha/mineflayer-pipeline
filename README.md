@@ -53,4 +53,52 @@ pipe.run(
 ```
 
 ### Mineflayer example
-An example of using tasks for the bot, you can see here: [fisherman bot](https://github.com/RealPeha/mineflayer-pipeline/blob/master/examples/fisherman.js)
+An example of using tasks for the mineflayer bot, you can see here: [fisherman bot](https://github.com/RealPeha/mineflayer-pipeline/blob/master/examples/fisherman.js)
+
+### Available operators
+This is just a list of available operators. Description and examples of use will be later
+
+```javascript
+const commonOperators = require('mineflayer-pipeline/common')
+```
+
+- value
+- wait
+- nextIf
+- repeat
+- restart
+- jump
+- jumpIf
+- raw
+- wrap
+- run
+
+```javascript
+const arrayOperators = require('mineflayer-pipeline/array')
+```
+
+- each
+- filter
+- map
+- max
+- min
+- reduce
+
+### Available tasks
+This is just a list of available task operators for the bot. Now they are few, but their creation is very simple and now I am not focused on this.
+
+```javascript
+const tasks = require('mineflayer-pipeline/tasks')
+```
+
+- activateItem
+- chat
+- consume
+- dig
+- equip
+- findBlock
+- fish
+- off
+- on
+- once
+- placeBlock
