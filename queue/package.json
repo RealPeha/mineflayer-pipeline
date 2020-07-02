@@ -1,0 +1,11 @@
+{
+  "name": "queue",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "better-queue": "^3.8.10",
+    "mineflayer": "^2.22.0",
+    "mineflayer-navigate": "^0.0.10"
+  }
+}
